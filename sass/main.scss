@@ -34,6 +34,9 @@ main{
         padding: 2.4rem;
         border-radius: 1.2rem;
         text-align: center;
+        @media (min-width: 768px) {
+            padding: 4rem;
+        }
         &__avatar{
             img{
                 width: 8.8rem;

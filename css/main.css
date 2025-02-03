@@ -36,6 +36,11 @@ main .profile {
   border-radius: 1.2rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  main .profile {
+    padding: 4rem;
+  }
+}
 main .profile__avatar img {
   width: 8.8rem;
   border-radius: 100rem;
