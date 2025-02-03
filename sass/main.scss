@@ -1,0 +1,79 @@
+@import "base";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: $grey900;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main{
+    width: 80%;
+    max-width: 38.4rem;
+    margin: 0 auto 3.2rem;
+    .profile{
+        background-color: $grey800;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;
+        padding: 2.4rem;
+        border-radius: 1.2rem;
+        text-align: center;
+        &__avatar{
+            img{
+                width: 8.8rem;
+                border-radius: 100rem;
+            }
+        }
+        &__user{
+            &-name{
+                @include titleH2
+            }
+            &-city{
+                @include titleH3
+            }
+        }
+        &__phrase{
+            @include text
+        }
+        &__social{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            a{
+                @include button;
+                transition: all ease-in-out 300ms;
+            }
+            a:hover{
+                background-color: $green;
+                color: $grey900;
+            }
+        }
+    }
+}
+
+footer{ 
+    @include text($size: 1.1rem, $color: $white);
+    text-align: center; 
+    a {
+        color: $green;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Variables */
+$grey900: #141414;
+$grey800: #1F1F1F;
+$grey700: #333333;
+$green: #C4F82A;
+$white: #ffffff;
+
+@mixin text($size: 1.4rem, $weight: 400, $color: $white ){
+    font-family: 'Inter';
+    line-height: 150%;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin titleH2{
+    @include text(2.4rem, 700);
+}
+
+@mixin titleH3{
+    @include text(1.4rem, 600, $green);
+}
+
+@mixin button{
+    @include text(1.4rem, 600);
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    background-color: $grey700;
+    border-radius: .8rem;
+}
